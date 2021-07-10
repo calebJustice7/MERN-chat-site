@@ -1,0 +1,114 @@
+.main-chat-wrapper {
+    height: 100vh;
+    background-color: #dadfea;
+    width: 100%;
+    /*position: relative;*/
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.text-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c3241;
+    color: white;
+    /*position: absolute;*/
+    width: 100%;
+    /*bottom: -40px;*/
+}
+
+.text-input input {
+    padding: 25px;
+    font-size: 1em;
+    background: none;
+    color: white;
+    border: none;
+    outline: none;
+    flex: .96;
+}
+
+.text-input .send-icon {
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.messages {
+    overflow: scroll;
+    padding: 5px 10px 40px 10px;
+}
+
+.message {
+    width: fit-content;
+    max-width: 60vw;
+    overflow: hidden;
+    /*overflow-wrap: anywhere;*/
+    word-wrap: anywhere;
+    /*text-overflow-mode: wrap;*/
+    margin-top: 40px;
+    position: relative;
+    border-radius: 15px;
+    padding: 6px 13px;
+}
+
+/*.message:last-child {*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+.go-back {
+    display: none;
+}
+
+.message div:last-child {
+    position: absolute;
+    top: -23px;
+    z-index: 5;
+    width: fit-content;
+    min-widtH: 80px;
+    text-align: left;
+}
+
+.my-message {
+    background-color: #ffffff;
+    margin-left: auto;
+    border-bottom-right-radius: 2px;
+}
+
+.my-message div:last-child {
+    right: 0px;
+    color: gray;
+    min-widtH: 80px;
+    text-align: right;
+}
+
+.them-message {
+    background-color: #28b328;
+    margin-right: auto;
+    color: white;
+    border-bottom-left-radius: 2px;
+}
+.them-message div:last-child {
+    color: gray;
+    left: 2px;
+}
+
+.go-back {
+    position: absolute;
+    /*top: 40px;*/
+    width: calc(100vw - 15px);
+    padding-top: 40px;
+    padding-left: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .main-chat-wrapper {
+        width: 100vw;
+        height: 88vh;
+    }
+    .go-back {
+        display: block;
+    }
+}

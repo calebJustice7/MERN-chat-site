@@ -1,0 +1,115 @@
+.header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100vw;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    font-weight: 200;
+    padding: 20px 0;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+    width: 80vw;
+    margin: 90px auto 0 auto;
+}
+
+.cards .left, .cards .right{
+    width: 35%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.img-uploader {
+    padding: 20px;
+}
+
+.img-uploader div:first-child {
+    margin: 20px 0 30px 0;
+}
+
+.img-uploader .upload-box {
+    background-color: #dadfea;
+    border: 1px dashed black;
+    padding: 30px 20px;
+}
+.image-btn {
+    border: 1px solid white;
+    padding: 7px 15px;
+    cursor: pointer;
+    color: white;
+    background-color: #00aaf1;
+    font-size: 1em;
+}
+
+.settings-wrapper .display-image {
+    max-width: 100%;
+}
+
+.settings-wrapper .right  {
+    padding: 20px;
+}
+
+.settings-wrapper .right div:first-child {
+    margin-top: 15px;
+}
+
+.right div:first-child input {
+    margin-top: 15px;
+    outline: none;
+    color: white;
+    background-color: #434343;
+    border: none;
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.settings-wrapper .back {
+    position: absolute;
+    color: white !important;
+    cursor: pointer;
+    font-size: 2em !important;
+    top: 22px;
+    left: 22px;
+}
+
+.settings-wrapper .prof {
+    margin-top: 20px;
+}
+
+.loading {
+    animation: 1s rotate infinite;
+    font-size: 2.7em !important;
+    color: white !important;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+
+@media screen and (max-width: 700px) {
+    .cards {
+        flex-direction: column;
+        width: 85vw;
+    }
+
+    .cards .left, .cards .right{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .img-uploader {
+        padding:10px;
+    }
+
+    .settings-wrapper .right  {
+        padding: 5px;
+    }
+
+    .settings-wrapper .left  {
+        padding: 5px;
+    }
+}

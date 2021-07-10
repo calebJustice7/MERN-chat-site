@@ -1,0 +1,75 @@
+`encrypted` option is deprecated in favor of `useTLS`
+Listening on port  9000
+db connected
+SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at parse (/var/www/html/server/node_modules/body-parser/lib/types/json.js:89:19)
+    at /var/www/html/server/node_modules/body-parser/lib/read.js:121:18
+    at invokeCallback (/var/www/html/server/node_modules/raw-body/index.js:224:16)
+    at done (/var/www/html/server/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/var/www/html/server/node_modules/raw-body/index.js:273:7)
+    at emitNone (events.js:111:20)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:139:11)
+    at process._tickCallback (internal/process/next_tick.js:181:9)
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
+
+MongoServerSelectionError: connection <monitor> to 54.196.150.216:27017 timed out
+    at Timeout.waitQueueMember.timer.setTimeout [as _onTimeout] (/var/www/html/server/node_modules/mongodb/lib/core/sdam/topology.js:438:30)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+`encrypted` option is deprecated in favor of `useTLS`
+Listening on port  9000
+db connected
+(node:5202) UnhandledPromiseRejectionWarning: CastError: Cast to ObjectId failed for value "{ sentFrom: '6070ff66a4bbb014520fb55c',
+  message: 'sd',
+  date: '2021-04-13T00:10:10.740Z' }" at path "_id" for model "Conversations"
+    at model.Query.exec (/var/www/html/server/node_modules/mongoose/lib/query.js:4371:21)
+    at model.Query.Query.then (/var/www/html/server/node_modules/mongoose/lib/query.js:4463:15)
+    at router.post (/var/www/html/server/routes/chat.js:63:42)
+    at Layer.handle [as handle_request] (/var/www/html/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/html/server/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/html/server/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/html/server/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/html/server/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/html/server/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/html/server/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/var/www/html/server/node_modules/express/lib/router/index.js:174:3)
+    at router (/var/www/html/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/var/www/html/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/var/www/html/server/node_modules/express/lib/router/index.js:317:13)
+    at /var/www/html/server/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/var/www/html/server/node_modules/express/lib/router/index.js:335:12)
+(node:5202) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:5202) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:5202) UnhandledPromiseRejectionWarning: CastError: Cast to ObjectId failed for value "{ id: '6074e007a4bbb014520fb55e' }" at path "_id" for model "Conversations"
+    at model.Query.exec (/var/www/html/server/node_modules/mongoose/lib/query.js:4371:21)
+    at model.Query.Query.then (/var/www/html/server/node_modules/mongoose/lib/query.js:4463:15)
+    at router.post (/var/www/html/server/routes/chat.js:63:42)
+    at Layer.handle [as handle_request] (/var/www/html/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/html/server/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/html/server/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/html/server/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/html/server/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/html/server/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/html/server/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/var/www/html/server/node_modules/express/lib/router/index.js:174:3)
+    at router (/var/www/html/server/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/var/www/html/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/var/www/html/server/node_modules/express/lib/router/index.js:317:13)
+    at /var/www/html/server/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/var/www/html/server/node_modules/express/lib/router/index.js:335:12)
+(node:5202) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
+
+MongoServerSelectionError: connection <monitor> to 54.196.150.216:27017 timed out
+    at Timeout.waitQueueMember.timer.setTimeout [as _onTimeout] (/var/www/html/server/node_modules/mongodb/lib/core/sdam/topology.js:438:30)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)

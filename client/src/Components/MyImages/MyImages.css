@@ -1,0 +1,83 @@
+.my-images .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    padding-top: 50px;
+    grid-gap: 20px;
+}
+
+.my-images .images .my-image {
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+    width: 85%;
+}
+
+.my-images .images .my-image img{
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+}
+
+.my-image .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.my-image .actions .delete {
+    font-size: 2em !important;
+    cursor: pointer;
+    color: red;
+}
+
+.my-image .actions .account {
+    font-size: 2em !important;
+    cursor: pointer;
+    color: #00aaf2;
+}
+
+.my-images .back-icon {
+    position: absolute;
+    color: white !important;
+    cursor: pointer;
+    font-size: 2em !important;
+    top: 22px;
+    left: 22px;
+}
+
+.confirm-delete {
+    padding: 20px;
+}
+
+.confirm-delete div:first-child {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.confirm-delete .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.confirm-delete .buttons button {
+    border: none;
+    background-color: #00aaf1;
+    color: white;
+    font-size: 1em;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.confirm-delete .buttons button:first-child {
+    margin-right: 25px;
+    background-color: red;
+}
+
+@media screen and (max-width: 700px) {
+    .my-images .images {
+        grid-template-columns: 1fr;
+    }
+}
