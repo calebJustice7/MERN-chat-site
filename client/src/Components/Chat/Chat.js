@@ -8,8 +8,8 @@ import MainChat from "./MainChat/MainChat";
 import $ from 'jQuery';
 
 let socket;
-let socketUrl = 'http://localhost:9000';
-// let socketUrl = 'http://calebjustice.com:9000';
+let socketUrl = 'https://calebjustice.com:9000';
+// let socketUrl = 'http://149.28.14.146:9000';
 
 export default class Chat extends React.Component {
 
@@ -34,14 +34,31 @@ export default class Chat extends React.Component {
     }
 
     componentDidMount() {
-        $('#message').hide();
-        setTimeout(() => {
-            $('#message').slideDown(200);
-        }, 300);
+        let showPopup = true;
+        if (localStorage.getItem('LPU')) {
+            let now = new Date();
+            let old = new Date(JSON.parse(localStorage.getItem('LPU')));
+            let difference = (now - old) / 1000;
+            if (difference > 60) {
+                showPopup = true;
+                localStorage.setItem('LPU', JSON.stringify(new Date()));
+            } else {
+                showPopup = false;
+            }
+        } else {
+            localStorage.setItem('LPU', JSON.stringify(new Date()));
+        }
 
-        setTimeout(() => {
-            $('#message').slideUp(200);
-        }, 4500);
+        $('#message').hide();
+        if(showPopup) {
+            setTimeout(() => {
+                $('#message').slideDown(200);
+            }, 300);
+    
+            setTimeout(() => {
+                $('#message').slideUp(200);
+            }, 4500);
+        }
 
         auth('GET_USER').then(user => {
             this.getConversations();
@@ -65,12 +82,10 @@ export default class Chat extends React.Component {
                 })
             }
         })
-        setInterval(() => {
-            socket.emit('test');
-        }, 3000);
     }
 
     componentWillUnmount() {
+        socket.emit('leave', this.state.user._id);
         this._isMounted = false;
     }
 

@@ -65,6 +65,7 @@ export default class SignIn extends React.Component {
             }
             if(res.data.user && res.data.token) {
                 auth('AUTH', res.data);
+                axios.defaults.headers.common['Authorization'] = localStorage.getItem('JWT_PAYLOAD');
                 setTimeout(() => {
                     this.props.history.push('/chat');
                 }, 300);

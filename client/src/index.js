@@ -5,8 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 
-let url = 'http://localhost:9000';
-// let url = 'http://calebjustice.com:9000';
+let url = 'https://calebjustice.com:9000';
+// let url = 'http://149.28.14.146:9000';
 
 axios.defaults.baseURL = url;
 axios.defaults.headers.post['Content-Type'] = 'application/json';

@@ -82,7 +82,9 @@ export default class Settings extends React.Component {
                 setTimeout(() => {
                     this.setState({showPopup: false, message: ''});
                 },2000);
-            });
+            }).catch(() => {
+                this.setState({showPopup: true, message: 'Something went wrong uploading image', isUploading: false})
+            })
         } else {
             if(this.state.isUploading || (this.state.message.length > 0 || this.state.messages === 'Success') || !this.state.previewSourceBg || Object.keys(this.state.user) < 1) return;
 

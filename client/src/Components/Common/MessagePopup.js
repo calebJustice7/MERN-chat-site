@@ -23,7 +23,7 @@ export default class MessagePopup extends React.Component {
         }
 
         if(this.props.model) {
-            theChild =  <div style={{position: 'absolute', top: '0', bottom: '0', left: '0', right: '0', zIndex: this.props.zIndex ? this.props.zIndex : '20vw', width: '100vw', backgroundColor: this.props.backgroundColor ? this.props.backgroundColor : 'rgba(0, 0, 0, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            theChild =  <div style={{overflow: 'scoll', position: 'absolute', top: '0', bottom: '0', left: '0', right: '0', zIndex: this.props.zIndex ? this.props.zIndex : 20, width: '100vw', backgroundColor: this.props.backgroundColor ? this.props.backgroundColor : 'rgba(0, 0, 0, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                 <div style={{backgroundColor: this.props.noBg ? '' : 'white'}}>
                     {this.props.children}
                 </div>

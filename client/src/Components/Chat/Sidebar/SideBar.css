@@ -182,6 +182,12 @@
     transition: 0.2s all;
 }
 
+.logout {
+    font-size: 1em !important;
+    top: 80px;
+    cursor: pointer;
+}
+
 .settings-icon:hover {
     color: #00aaf1;
 }
