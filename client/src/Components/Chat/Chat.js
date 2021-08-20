@@ -66,6 +66,7 @@ export default class Chat extends React.Component {
                 this.props.history.push('/sign-in');
             } else {
                 socket = socketClient(socketUrl);
+                if (!socket) return;
                 socket.emit('connection', user);
                 socket.on('connection', () => {
                     console.info('socket connection established on port 9000');
@@ -85,8 +86,9 @@ export default class Chat extends React.Component {
     }
 
     componentWillUnmount() {
-        socket.emit('leave', this.state.user._id);
         this._isMounted = false;
+        if (!socket) return;
+        socket.emit('leave', this.state.user._id);
     }
 
     getConversations = () => {
