@@ -32,6 +32,9 @@ mongoose.connect(db, {
 require("./config/passport")(passport)
 app.use(passport.initialize());
 
+app.get('/api/healthcheck', (req, res) => {
+    res.status(200).send("OK");
+})
 app.use('/api/users/', Users);
 app.use('/api/chat/', Chat);
 app.use('/api/defaults/', Defaults);
@@ -39,7 +42,7 @@ app.use('/api/pw', Pw);
 
 app.use(express.static(path.join(__dirname, "../client", "build")));
 
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 8000;
 
 let server;
 
