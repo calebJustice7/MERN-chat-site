@@ -1,5 +1,5 @@
 // let prod = false;
-let prod = true;
+let prod = false;
 
 const express = require('express');
 const cors = require('cors');
