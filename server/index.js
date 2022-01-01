@@ -10,6 +10,7 @@ const Users = require('./routes/users');
 const Chat = require('./routes/chat');
 const Defaults = require('./routes/defaults');
 const https = require('https');
+const path = require("path");
 const socket = require('socket.io');
 const User = require('./models/User');
 const Pw = require('./routes/pw');
@@ -35,6 +36,8 @@ app.use('/api/users/', Users);
 app.use('/api/chat/', Chat);
 app.use('/api/defaults/', Defaults);
 app.use('/api/pw', Pw);
+
+app.use(express.static(path.join(__dirname, "../client", "build")));
 
 const port = process.env.PORT || 9000;
 
